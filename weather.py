@@ -47,13 +47,13 @@ def main(city_name, state_name, country_name):
     weather_data = get_current_weather(lat, lon, API_KEY)
     return weather_data
 
-if __name__ == "__main__":
-    lat, lon = get_lat_lon("New South Wales", "NSA", "AUS", API_KEY)
-    if lat is not None and lon is not None:
-        weather_data = get_current_weather(lat, lon, API_KEY)
-        if weather_data is not None:
-            print(weather_data)
-        else:
-            print("Failed to retrieve weather data.")
-    else:
-        print("Failed to retrieve latitude and longitude.")
+# if __name__ == "__main__":
+#     lat, lon = get_lat_lon("New South Wales", "NSA", "AUS", API_KEY)
+#     if lat is not None and lon is not None:
+#         weather_data = get_current_weather(lat, lon, API_KEY)
+#         if weather_data is not None:
+#             print(weather_data)
+#         else:
+#             print("Failed to retrieve weather data.")
+#     else:
+#         print("Failed to retrieve latitude and longitude.")

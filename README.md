@@ -42,6 +42,7 @@ OWM_API_KEY="<open-weather-map-api-key>"
 - Python
 - Flask
 - Infobip Python SDK
+- Tailwind CSS
 
 ## Usage
 
