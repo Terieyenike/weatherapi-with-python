@@ -17,7 +17,7 @@ def index():
     data = get_weather(city_name, state_code, country_code)
     if city_name and state_code and country_code:
       data = get_weather(city_name, state_code, country_code)
-      message = f"Weather for {city_name}: temperature of {data.temperature}{degree_sign}C and {data.description}"
+      message = f"Weather for {city_name.title()}: temperature of {data.temperature}{degree_sign}C with {data.description}"
       # send_sms_from_app(message)
       print(message)
   return render_template("index.html", data=data)

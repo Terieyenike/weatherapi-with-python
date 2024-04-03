@@ -48,7 +48,7 @@ def main(city_name, state_name, country_name):
     return weather_data
 
 if __name__ == "__main__":
-    lat, lon = get_lat_lon("Miami", "FL", "US", API_KEY)
+    lat, lon = get_lat_lon("New South Wales", "NSA", "AU", API_KEY)
     if lat is not None and lon is not None:
         weather_data = get_current_weather(lat, lon, API_KEY)
         if weather_data is not None:
