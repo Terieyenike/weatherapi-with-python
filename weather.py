@@ -12,7 +12,7 @@ OWM_ENDPOINT = "https://api.openweathermap.org/data/2.5/weather"
 class WeatherData:
     main: str
     description: str
-    icon: str
+    # icon: str
     temperature: int
 
 def get_lat_lon(city_name, state_code, country_code, API_key):
@@ -37,9 +37,9 @@ def get_current_weather(lat, lon, API_key):
     weather = data["weather"][0]
     main = weather["main"]
     description = weather["description"]
-    icon = weather["icon"]
+    # icon = weather["icon"]
     temperature = int(data["main"]["temp"])
-    return WeatherData(main, description, icon, temperature)
+    return WeatherData(main, description, temperature)
 
 
 def main(city_name, state_name, country_name):
@@ -48,7 +48,7 @@ def main(city_name, state_name, country_name):
     return weather_data
 
 if __name__ == "__main__":
-    lat, lon = get_lat_lon("New South Wales", "NSA", "AU", API_KEY)
+    lat, lon = get_lat_lon("New South Wales", "NSA", "AUS", API_KEY)
     if lat is not None and lon is not None:
         weather_data = get_current_weather(lat, lon, API_KEY)
         if weather_data is not None:
