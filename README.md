@@ -2,6 +2,8 @@
 
 This Flask application integrates with a weather API ([Open Weather Map](https://openweathermap.org/)) to provide real-time weather information of a location based on the city name, state code, and country code. It also sends [SMS](https://www.infobip.com/docs/api/channels/sms) using Infobip Python SDK to your phone.
 
+![Weather SMS report](https://github.com/Terieyenike/weatherapi-with-python/assets/25850598/f6247b7e-7bd8-4204-ab10-ec8d05952932)
+
 ## Prerequisites
 
 Before running the application, ensure you have the following:
@@ -17,7 +19,7 @@ Before running the application, ensure you have the following:
 ### Clone this repository:
 
 ```
-git clone <repository-url>
+git clone https://github.com/Terieyenike/weatherapi-with-python
 cd weatherapi-with-python
 ```
 
@@ -35,9 +37,15 @@ In the `.env` file, replace the value of your openweathermap API key
 OWM_API_KEY="<open-weather-map-api-key>"
 ```
 
+## Tech stack
+
+- Python
+- Flask
+- Infobip Python SDK
+
 ## Usage
 
-Once you have the requirements installed, `flask run` from the top-level directory will serve the app on `localhost:5000`.
+Once you have the requirements installed, `flask run` from the top-level directory will serve the app on `127.0.0.1:5000`.
 
 ## Contributors
 
