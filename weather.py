@@ -16,8 +16,8 @@ class WeatherData:
     longitude: float
     temperature: int
 
-def get_lat_lon(city_name, state_code, country_code, API_key):
-    resp = requests.get(f'http://api.openweathermap.org/geo/1.0/direct?q={city_name},{state_code},{country_code}&appid={API_key}')
+def get_lat_lon(city_name, state_code, country_code, API_KEY):
+    resp = requests.get(f'http://api.openweathermap.org/geo/1.0/direct?q={city_name},{state_code},{country_code}&appid={API_KEY}')
     data = resp.json()
     if data:
         location = data[0]
@@ -26,11 +26,11 @@ def get_lat_lon(city_name, state_code, country_code, API_key):
         return None, None
 
 
-def get_current_weather(lat, lon, API_key):
+def get_current_weather(lat, lon, API_KEY):
     params = {
         "lat": lat,
         "lon": lon,
-        "appid": API_key,
+        "appid": API_KEY,
         "units": "metric"
     }
     resp = requests.get(OWM_ENDPOINT, params=params)
