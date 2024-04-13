@@ -35,6 +35,9 @@ In the `.env` file, replace the value of your openweathermap API key
 
 ```
 OWM_API_KEY="<open-weather-map-api-key>"
+IB_BASE_URL="<your API Base URL>"
+IB_API_KEY="<your API Key>"
+DESTINATION_NUMBER="<your phone number>"
 ```
 
 ## Tech stack
